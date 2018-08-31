@@ -4,8 +4,8 @@ let Songs = require('../models/songs')
 
 router.get('/', (req, res, next) => {
   Songs.find({})
-    .then(plist => {
-      res.send(plist)
+    .then(slist => {
+      res.send(slist)
     }).catch(next)
 })
 

@@ -3,6 +3,13 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+// @ts-ignore
+let itunesApi = Axios.create({
+  baseURL: 'https://itunes.apple.com/search?callback=?&term=',
+  timeout: 3000
+})
+
+
 export default new Vuex.Store({
   state: {
 
@@ -11,6 +18,6 @@ export default new Vuex.Store({
 
   },
   actions: {
-
+    // getMusicByArtist(artist) {
   }
 })

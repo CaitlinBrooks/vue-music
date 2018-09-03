@@ -1,13 +1,14 @@
 <template>
-  <div class="home" "row">
-    <div class="col">
+  <div class="home">
+    <div class="row">
       <form @submit.prevent="searchMusic">
         <input type="text" name="search" placeholder="Search Songs" v-model="artist">
         <button class="search" type="submit">Search Songs</button>
+        <results class="col-6" "align-items-left"></results>
+        <myTunes class="col-6" "align-items-right"></myTunes>
       </form>
     </div>
-    <div class="results" "col-6"></div>
-    <div class="mySongs" "col-6"></div>
+  </div>
   </div>
 </template>
 

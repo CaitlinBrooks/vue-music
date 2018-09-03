@@ -11,6 +11,11 @@ let itunesApi = Axios.create({
   timeout: 5000
 })
 
+let playlistApi = Axios.create({
+  baseURL: '//localhost:300/api',
+  timeout: 5000
+})
+
 
 export default new Vuex.Store({
   state: {

@@ -1,13 +1,14 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Axios from 'axios'
+import Song from './models/song.js'
 
 Vue.use(Vuex)
 
 // @ts-ignore
 let itunesApi = Axios.create({
-  baseURL: 'https://itunes.apple.com/search?callback=?&term=',
-  timeout: 3000
+  baseURL: 'https://itunes.apple.com/',
+  timeout: 5000
 })
 
 

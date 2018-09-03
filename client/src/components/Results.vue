@@ -21,17 +21,14 @@
     data() {
       return {}
     },
-    mounted() {
-      this.$store.dispatch('getSongs')
-    },
     methods: {
-      deleteSong(song) {
-        this.$store.dispatch('deleteSong', song)
+      addSong(song) {
+        this.$store.dispatch('addSong', song)
       }
     },
     computed: {
-      playlist() {
-        return this.$store.state.playlist
+      songResults() {
+        return this.$store.state.songs
       }
     },
     components: {}

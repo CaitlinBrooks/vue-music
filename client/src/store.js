@@ -39,6 +39,15 @@ export default new Vuex.Store({
           let songList = res.data.results.map(song => new Song(song))
           commit('setSongs', songList)
         })
-    }
-  }
-})
+    },
+    getSongs({ commit, dispatch }) {
+      itunesApi.get('/songs')
+        .then(res => {
+          commit('setPlaylist', res.data)
+        })
+    },
+
+  })
+
+
+}

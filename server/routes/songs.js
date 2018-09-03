@@ -1,5 +1,5 @@
 let router = require('express').Router()
-let Songs = require('../models/songs')
+let Songs = require('../models/song')
 
 
 router.get('/', (req, res, next) => {
@@ -11,17 +11,17 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
   Songs.create(req.body)
-    .then(post => {
-      res.send(post)
+    .then(song => {
+      res.send(song)
     }).catch(next)
 })
 
-router.put('/:id', (req, res, next) => {
-  Songs.findByIdAndUpdate(req.params.id, req.body)
-    .then(() => res.send({
-      message: 'Success'
-    })).catch(next)
-})
+// router.put('/:id', (req, res, next) => {
+//   Songs.findByIdAndUpdate(req.params.id, req.body)
+//     .then(() => res.send({
+//       message: 'Success'
+//     })).catch(next)
+// })
 
 // router.post('/:id/upvote', (req, res, next) => {
 //   Songs.findById(req.params.id)

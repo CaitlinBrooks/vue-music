@@ -12,6 +12,7 @@ export default new Router({
       name: 'home',
       component: Home
     },
+    // could remove about below**
     {
       path: '/about',
       name: 'about',

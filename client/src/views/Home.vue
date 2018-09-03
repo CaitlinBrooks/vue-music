@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="row">
+    <div class="row-sm-12">
       <form @submit.prevent="searchMusic">
         <input type="text" name="search" placeholder="Search Songs" v-model="artist">
         <button class="search" type="submit">Search Songs</button>

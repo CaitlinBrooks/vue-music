@@ -18,8 +18,30 @@
 
   export default {
     name: 'home',
+    data() {
+      return {
+        artist: ''
+      }
+    },
+    methods: {
+      addSong(song) {
+        this.$store.dispatch('addSong')
+      },
+      searchMusic() {
+        this.$store.dispatch('searchMusic', this.artist)
+      }
+    },
+    computed: {
+      songs() {
+        this.$store.state.songs
+      },
+      myTunes() {
+        return this.$store.state.playlist
+      }
+    },
     components: {
-      HelloWorld
+      myTunes,
+      Results
     }
   }
 </script>

@@ -19,12 +19,26 @@ let playlistApi = Axios.create({
 
 export default new Vuex.Store({
   state: {
-
+    songs: [],
+    playlist: []
   },
   mutations: {
-
+    setSongs(state, songs) {
+      state.songs = songs
+    },
+    setPlaylist(state, playlist) {
+      state.playlist = playlist
+    }
   },
   actions: {
     // getMusicByArtist(artist) {
+
+    searchSongs({ dispatch, commit }, artist) {
+      itunesApi.get(`search?term=${artist}`)
+        .then(res => {
+          let songList = res.data.results.map(song => new Song(song))
+          commit('setSongs', songList)
+        })
+    }
   }
 })

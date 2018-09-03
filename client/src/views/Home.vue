@@ -3,14 +3,18 @@
     <div class="col">
       <form @submit.prevent="searchMusic">
         <input type="text" name="search" placeholder="Search Songs" v-model="artist">
+        <button class="search" type="submit">Search Songs</button>
       </form>
     </div>
+    <div class="results" "col-6"></div>
+    <div class="mySongs" "col-6"></div>
   </div>
 </template>
 
 <script>
   // @ is an alias to /src
-  import HelloWorld from '@/components/HelloWorld.vue'
+  import myTunes from "@/components/myTunes";
+  import Results from "@/components/Results";
 
   export default {
     name: 'home',

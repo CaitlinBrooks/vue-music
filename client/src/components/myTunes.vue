@@ -1,6 +1,6 @@
 <template>
-  <div class="mySongs">
-    <h1>MySongs</h1>
+  <div class="myTunes">
+    <h1>MyTunes</h1>
     <div v-for="song in playlist">
       <button type="button" @click="deleteSong(song)">Delete Song</button>
       <audio controls>
@@ -17,7 +17,7 @@
 
 <script>
   export default {
-    name: 'mySongs',
+    name: 'myTunes',
     data() {
       return {}
     },

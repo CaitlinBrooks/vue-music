@@ -14,3 +14,26 @@
     </div>
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'mySongs',
+    data() {
+      return {}
+    },
+    mounted() {
+      this.$store.dispatch('getSongs')
+    },
+    methods: {
+      deleteSong(song) {
+        this.$store.dispatch('deleteSong', song)
+      }
+    },
+    computed: {
+      playlist() {
+        return this.$store.state.playlist
+      }
+    },
+    components: {}
+  }
+</script>

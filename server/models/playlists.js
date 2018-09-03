@@ -4,20 +4,15 @@ let ObjectId = Schema.Types.ObjectId
 let schemaName = 'Playlist'
 
 let schema = new Schema({
-  title: {
+  name: {
     type: String,
-    required: true
+    required: true,
+    default: "Playlist"
   },
-  imgUrl: {
-    type: String,
-    ref: 'User',
-    required: true
-  },
-  audio: {
-    type: String,
+  songs: {
+    type: Array,
     required: true
   }
-  //how does timestamp integrate on front end
 })
 
 module.exports = mongoose.model(schemaName, schema)

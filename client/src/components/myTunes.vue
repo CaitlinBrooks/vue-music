@@ -4,7 +4,7 @@
     <div v-for="song in playlist">
       <button type="button" @click="deleteSong(song)">Delete Song</button>
       <audio controls>
-        <source :src="song.preview">
+        <source src="${song.preview}" type="audio/mpeg">
       </audio>
       <img :src="song.coverArt" alt="coverArt">
       <p>Title: {{song.title}}</p>

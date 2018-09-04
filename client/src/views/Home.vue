@@ -2,10 +2,10 @@
   <div class="home">
     <div class="row-sm-12">
       <form @submit.prevent="searchMusic">
-        <input type="text" name="search" placeholder="Search Songs" v-model="artist">
+        <input type="text" name="searchMusic" placeholder="Search Songs" v-model="artist">
         <button class="search" type="submit">Search Songs</button>
-        <results class="col-6" "align-items-left"></results>
-        <myTunes class="col-6" "align-items-right"></myTunes>
+        <results class="col-6  align-items-left"></results>
+        <myTunes class="col-6 align-items-right"></myTunes>
       </form>
     </div>
   </div>

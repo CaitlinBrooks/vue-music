@@ -34,7 +34,7 @@ export default new Vuex.Store({
   actions: {
     // getMusicByArtist(artist) {
 
-    searchSongs({ dispatch, commit }, artist) {
+    searchMusic({ dispatch, commit }, artist) {
       itunesApi.get(`search?term=${artist}`)
         .then(res => {
           let songList = res.data.results.map(song => new Song(song))

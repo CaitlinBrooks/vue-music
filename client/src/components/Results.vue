@@ -14,7 +14,7 @@
     </div>
   </div>
 </template>
-
+<!-- maybe utilizing :key is the solution? -->
 <script>
   export default {
     name: 'results',

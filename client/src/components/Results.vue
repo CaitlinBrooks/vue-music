@@ -3,9 +3,9 @@
     <h1>Song Search Results</h1>
     <div v-for="song in songResults">
       <button type="button" @click="addSong(song)">Add a Song</button>
-      <!-- <audio controls>
-        <source :src="song.preview">
-      </audio> -->
+      <audio controls>
+        <source :src="song.previewUrl" type="audio/mpeg">
+      </audio>
       <img :src="song.coverArt" alt="coverArt">
       <p>Title: {{song.title}}</p>
       <p>Artist: {{song.artist}}</p>

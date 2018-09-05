@@ -1,10 +1,10 @@
 <template>
   <div class="results">
     <h1>Song Search Results</h1>
-    <div v-for="song in songResults">
+    <div v-for="song in songResults" :key="song.trackId">
       <button type="button" @click="addSong(song)">Add a Song</button>
       <audio controls>
-        <source :src="song.previewUrl" type="audio/mpeg">
+        <source :src="song.preview" type="audio/mpeg">
       </audio>
       <img :src="song.coverArt" alt="coverArt">
       <p>Title: {{song.title}}</p>

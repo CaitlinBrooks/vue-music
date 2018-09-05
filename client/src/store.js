@@ -13,7 +13,7 @@ let itunesApi = Axios.create({
 //https://itunes.apple.com/search?callback=?&term=
 
 let mytunesApi = Axios.create({
-  baseURL: '//localhost:300/api',
+  baseURL: '//localhost:3000/api',
   timeout: 5000
 })
 
@@ -42,7 +42,7 @@ export default new Vuex.Store({
         })
     },
     getSongs({ commit, dispatch }) {
-      itunesApi.get('/songs')
+      mytunesApi.get('/songs')
         .then(res => {
           commit('setPlaylist', res.data)
         })

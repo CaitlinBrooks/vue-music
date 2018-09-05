@@ -1,7 +1,7 @@
 <template>
   <div class="myTunes">
     <h1>MyTunes</h1>
-    <div v-for="song in playlist">
+    <div v-for="song in playlist" :key="song._id">
       <button type="button" @click="deleteSong(song)">Delete Song</button>
       <audio controls>
         <source :src="song.preview" type="audio/mpeg">

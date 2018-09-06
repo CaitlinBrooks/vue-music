@@ -15,6 +15,8 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+    background-image: url("https://img.freepik.com/free-vector/abstract-geometric-pattern-background_1319-242.jpg?size=338c&ext=jpg");
+
   }
 
   #nav {
